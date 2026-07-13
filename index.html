@@ -226,8 +226,9 @@
   .certs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:900px;margin:0 auto;}
   .cert-card{
     background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:32px 26px;
-    text-align:center;
+    text-align:center;display:block;transition:border-color .15s,transform .15s;
   }
+  .cert-card:hover{border-color:var(--orange);transform:translateY(-3px);}
   .cert-card .icon{
     width:52px;height:52px;border-radius:50%;background:var(--orange-soft);color:var(--orange);
     display:flex;align-items:center;justify-content:center;margin:0 auto 18px;
@@ -236,6 +237,9 @@
   .cert-card .tag{font-family:'IBM Plex Mono',monospace;font-size:0.7rem;color:var(--orange);text-transform:uppercase;letter-spacing:.08em;}
   .cert-card h4{font-size:1rem;margin:10px 0 10px;font-family:'Inter',sans-serif;font-weight:700;}
   .cert-card p{font-size:0.85rem;color:var(--muted);}
+  .cert-card .see{font-size:0.8rem;font-weight:700;color:var(--green);display:inline-flex;align-items:center;gap:5px;margin-top:12px;}
+  .cert-card .see svg{width:13px;height:13px;transition:transform .15s;}
+  .cert-card:hover .see svg{transform:translate(2px,-2px);}
 
   /* ===== ARTICLES ===== */
   .articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
@@ -616,24 +620,27 @@
 
     <h3 class="sub-head second">Certifications</h3>
     <div class="certs-grid">
-      <div class="cert-card">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg></div>
+      <a class="cert-card" href="https://www.coursera.org/account/accomplishments/specialization/certificate/J63M8WB5V2NP" target="_blank" rel="noopener">
+        <div class="icon">...</div>
         <span class="tag">Certification</span>
         <h4>Big Data Specialization</h4>
         <p>UC San Diego — spécialisation sur les fondamentaux et outils du Big Data.</p>
-      </div>
-      <div class="cert-card">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <span class="see">Voir le certificat →</span>
+      </a>
+      <a class="cert-card" href="https://www.credly.com/badges/edb87e17-f1c8-42b3-b661-68c0b6f5af7e/linked_in_profile" target="_blank" rel="noopener">
+        <div class="icon">...</div>
         <span class="tag">Certification</span>
         <h4>IBM Data Science</h4>
         <p>Parcours professionnel couvrant l'ensemble du cycle de vie d'un projet data.</p>
-      </div>
-      <div class="cert-card">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 15l4-5 4 3 5-7"/></svg></div>
+        <span class="see">Voir le certificat →</span>
+      </a>
+      <a class="cert-card" href="https://www.credly.com/badges/1c2b7d44-edab-41a1-bc8a-961dc32a68e5/linked_in_profile" target="_blank" rel="noopener">
+        <div class="icon">...</div>
         <span class="tag">Certification</span>
         <h4>Google Data Analytics</h4>
         <p>Certificat professionnel en analyse de données et visualisation.</p>
-      </div>
+        <span class="see">Voir le certificat →</span>
+      </a>
     </div>
   </div>
 </section>
