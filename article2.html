@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'effet barbecue : météo, jours fériés et demande retail — Hamza Dahchour</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBF3E1;--bg-soft:#F5EAD0;--card:#FFFFFF;--card-border:#E9DFC3;
+    --ink:#221F19;--muted:#6C6656;--green:#1F4B3B;--green-soft:#E4EEE7;
+    --orange:#DE5B34;--orange-soft:#FBE2D2;
+    --grad:linear-gradient(90deg,#DE5B34,#1F4B3B);--max:760px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.7;}
+  a{color:var(--green);text-decoration:none;}
+  body::before{content:'';position:fixed;top:0;left:0;right:0;height:5px;background:var(--grad);}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px;}
+  header{padding:26px 0;border-bottom:1px solid var(--card-border);margin-bottom:56px;background:rgba(251,243,225,0.9);}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;max-width:1120px;}
+  .back{font-size:0.85rem;color:var(--muted);display:flex;align-items:center;gap:6px;}
+  .back:hover{color:var(--orange);}
+  .mark{font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:var(--ink);}
+  .mark span{color:var(--orange);}
+  main{padding-bottom:100px;}
+  .meta{font-family:'IBM Plex Mono',monospace;font-size:0.8rem;color:var(--orange);margin-bottom:18px;}
+  h1{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4vw,2.6rem);font-weight:700;letter-spacing:-0.01em;line-height:1.15;margin-bottom:26px;color:var(--ink);}
+  h2{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;margin:40px 0 16px;color:var(--green);}
+  p{color:var(--muted);font-size:1.02rem;margin-bottom:18px;}
+  p strong{color:var(--ink);}
+  ul{margin:0 0 20px 20px;color:var(--muted);}
+  li{margin-bottom:8px;}
+  .tags{display:flex;gap:8px;margin:24px 0 40px;flex-wrap:wrap;}
+  .tags span{font-size:0.75rem;padding:5px 12px;border-radius:14px;background:var(--green-soft);color:var(--green);font-weight:600;}
+  .pull{border-left:3px solid var(--orange);padding-left:20px;margin:32px 0;font-style:italic;color:var(--ink);font-size:1.08rem;font-family:'Playfair Display',serif;}
+  footer{padding:36px 0;text-align:center;border-top:1px solid var(--card-border);}
+  footer p{font-size:0.8rem;color:var(--muted);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="mark">Hamza<span>.</span></span>
+    <a class="back" href="index.html">← Retour au portfolio</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="meta">Mai 2026 · 6 min de lecture</div>
+    <h1>L'« effet barbecue » : quand météo et jours fériés bouleversent la demande retail</h1>
+    <div class="tags"><span>Data Science</span><span>SHAP</span><span>Retail</span></div>
+
+    <p>Parmi les résultats les plus marquants de mon mémoire sur la prévision de la demande en produits frais chez Carrefour, il y a ce que j'ai appelé l'« effet barbecue ». C'est un bon exemple de ce que l'analyse SHAP permet de mettre en évidence : des interactions entre variables qu'une approche linéaire classique ne peut pas capturer.</p>
+
+    <h2>Un effet qui n'est pas une simple addition</h2>
+    <p>Intuitivement, on pourrait penser que l'effet d'un jour férié sur la demande s'ajoute simplement à l'effet d'une météo chaude. Ce n'est pas ce que montrent les données. Lorsque ces deux conditions se combinent — beau temps <strong>et</strong> jour férié — la demande de certaines catégories de produits frais augmente de <strong>45 % par rapport à un week-end normal</strong>, un chiffre supérieur à la somme des deux effets pris isolément.</p>
+    <p>C'est le signe d'une véritable interaction : le jour férié amplifie l'effet de la météo, et inversement. Un modèle qui traiterait ces deux variables indépendamment sous-estimerait systématiquement la demande dans ce scénario précis — c'est-à-dire, justement, dans les moments où une rupture de stock coûte le plus cher à l'enseigne comme au client.</p>
+
+    <h2>Des seuils de température différents selon les produits</h2>
+    <p>L'analyse SHAP a aussi permis d'identifier des seuils de température propres à chaque catégorie de produit, plutôt qu'un effet météo générique. La demande de boissons réfrigérées connaît une nette accélération à partir de 22°C, tandis que la demande de salades préparées suit une dynamique différente : elle s'inverse autour de 18°C. Ces seuils ne sont pas arbitraires — ils correspondent à des points de bascule réels dans le comportement d'achat, invisibles dans une simple moyenne mobile.</p>
+
+    <div class="pull">« Le jour férié n'ajoute pas un effet à la météo : il le multiplie. »</div>
+
+    <h2>Pourquoi cela compte pour un magasin</h2>
+    <p>Ce type de résultat n'a d'intérêt que s'il devient actionnable. Traduit en langage opérationnel, cela donne une règle simple pour un responsable de rayon : à l'approche d'un jour férié annoncé avec une météo chaude, il ne s'agit pas d'augmenter légèrement la commande, mais d'anticiper un pic de demande nettement supérieur à celui d'un jour férié « classique » ou d'un simple week-end ensoleillé.</p>
+    <p>C'est exactement le type d'enseignement que l'explicabilité (SHAP) permet de faire remonter d'un modèle de Machine Learning vers une décision métier concrète — et c'est ce qui, à mon sens, distingue un modèle « qui prédit bien » d'un modèle réellement utile.</p>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Hamza Dahchour. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>

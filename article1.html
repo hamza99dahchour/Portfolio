@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prévoir la demande de produits frais grâce au Machine Learning — Hamza Dahchour</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBF3E1;--bg-soft:#F5EAD0;--card:#FFFFFF;--card-border:#E9DFC3;
+    --ink:#221F19;--muted:#6C6656;--green:#1F4B3B;--green-soft:#E4EEE7;
+    --orange:#DE5B34;--orange-soft:#FBE2D2;
+    --grad:linear-gradient(90deg,#DE5B34,#1F4B3B);--max:760px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.7;}
+  a{color:var(--green);text-decoration:none;}
+  body::before{content:'';position:fixed;top:0;left:0;right:0;height:5px;background:var(--grad);}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px;}
+  header{padding:26px 0;border-bottom:1px solid var(--card-border);margin-bottom:56px;background:rgba(251,243,225,0.9);}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;max-width:1120px;}
+  .back{font-size:0.85rem;color:var(--muted);display:flex;align-items:center;gap:6px;}
+  .back:hover{color:var(--orange);}
+  .mark{font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:var(--ink);}
+  .mark span{color:var(--orange);}
+  main{padding-bottom:100px;}
+  .meta{font-family:'IBM Plex Mono',monospace;font-size:0.8rem;color:var(--orange);margin-bottom:18px;}
+  h1{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4vw,2.6rem);font-weight:700;letter-spacing:-0.01em;line-height:1.15;margin-bottom:26px;color:var(--ink);}
+  h2{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;margin:40px 0 16px;color:var(--green);}
+  p{color:var(--muted);font-size:1.02rem;margin-bottom:18px;}
+  p strong{color:var(--ink);}
+  ul{margin:0 0 20px 20px;color:var(--muted);}
+  li{margin-bottom:8px;}
+  .tags{display:flex;gap:8px;margin:24px 0 40px;flex-wrap:wrap;}
+  .tags span{font-size:0.75rem;padding:5px 12px;border-radius:14px;background:var(--green-soft);color:var(--green);font-weight:600;}
+  .pull{border-left:3px solid var(--orange);padding-left:20px;margin:32px 0;font-style:italic;color:var(--ink);font-size:1.08rem;font-family:'Playfair Display',serif;}
+  .stat-row{display:flex;gap:16px;flex-wrap:wrap;margin:28px 0;}
+  .stat{background:var(--card);border:1px solid var(--card-border);border-radius:14px;padding:18px 22px;flex:1;min-width:150px;}
+  .stat .num{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--orange);}
+  .stat .label{font-size:0.8rem;color:var(--muted);margin-top:4px;}
+  footer{padding:36px 0;text-align:center;border-top:1px solid var(--card-border);}
+  footer p{font-size:0.8rem;color:var(--muted);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="mark">Hamza<span>.</span></span>
+    <a class="back" href="index.html">← Retour au portfolio</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="meta">Mai 2026 · 8 min de lecture</div>
+    <h1>Prévoir la demande de produits frais grâce au Machine Learning</h1>
+    <div class="tags"><span>Machine Learning</span><span>Retail</span><span>Random Forest</span><span>SHAP</span></div>
+
+    <p>Dans le cadre de mon alternance chez Carrefour et de mon mémoire de fin d'études à l'EDC Paris Business School, je me suis penché sur un problème très concret pour la grande distribution : comment mieux anticiper la demande de produits frais réfrigérés, dont la durée de vie très courte laisse peu de marge d'erreur aux méthodes de prévision classiques. Voici ce que ce travail de recherche appliquée m'a appris.</p>
+
+    <h2>1. Le problème : des produits périssables, une demande très volatile</h2>
+    <p>Les rayons frais (sandwichs, salades préparées, charcuterie, boissons réfrigérées) posent un défi opérationnel particulier : une rupture coûte une vente, un surstock finit à la benne. Or la demande de ces produits est très sensible à des facteurs exogènes — météo, jours fériés, week-ends — que les méthodes de prévision traditionnelles, souvent basées sur des moyennes historiques, ne parviennent pas à capturer correctement.</p>
+
+    <h2>2. La méthode : Random Forest et explicabilité SHAP</h2>
+    <p>En m'appuyant sur deux années de données de vente réelles portant sur quatre sous-catégories de produits frais, j'ai construit un modèle <strong>Random Forest</strong> pour prédire la demande quotidienne, puis j'ai utilisé l'analyse <strong>SHAP (SHapley Additive exPlanations)</strong> pour comprendre quels facteurs pèsent réellement dans les prédictions, et comment, catégorie par catégorie.</p>
+    <p>Ce choix méthodologique n'est pas anodin : en environnement retail, un modèle performant mais opaque a peu de valeur pour un directeur de magasin. L'enjeu était de produire des prédictions fiables <strong>et</strong> compréhensibles.</p>
+
+    <h2>3. Ce que le modèle a révélé</h2>
+    <p>Les résultats confirment que les effets météo et calendaires sont statistiquement significatifs, non linéaires, et varient fortement selon la catégorie de produit. Trois enseignements principaux se dégagent : un seuil de température autour de 22°C fait bondir la demande de boissons fraîches ; 18°C marque le point d'inversion de la demande de salades préparées ; et la combinaison d'un temps chaud avec un jour férié génère un « effet barbecue » — une hausse de demande bien supérieure à la simple addition des deux effets pris séparément (j'y consacre un article dédié).</p>
+
+    <div class="stat-row">
+      <div class="stat"><div class="num">8–12%</div><div class="label">MAPE du modèle Random Forest</div></div>
+      <div class="stat"><div class="num">18–25%</div><div class="label">MAPE de la moyenne historique</div></div>
+      <div class="stat"><div class="num">2 ans</div><div class="label">de données de vente réelles</div></div>
+    </div>
+
+    <p>Concrètement, le modèle réduit significativement l'erreur de prévision par rapport à la référence historique, avec un écart particulièrement marqué lors des journées « atypiques » (canicule, jour férié, forte pluie) — c'est-à-dire précisément les journées où une mauvaise prévision coûte le plus cher.</p>
+
+    <h2>4. De la prédiction à la décision opérationnelle</h2>
+    <p>Un modèle de prévision n'a de valeur que s'il change une décision. La dernière partie du travail a donc consisté à traduire les sorties du modèle en <strong>recommandations de commande simples</strong>, utilisables par un responsable de rayon à partir d'une simple prévision météo et d'un calendrier — sans avoir besoin de comprendre les mathématiques du modèle sous-jacent.</p>
+
+    <div class="pull">« La performance d'un modèle ne se mesure pas seulement à sa précision, mais à sa capacité à changer une décision sur le terrain. »</div>
+
+    <h2>5. Ce que j'en retiens</h2>
+    <p>Ce projet a été une leçon complète de data science appliquée : partir d'un problème métier réel, choisir une méthode adaptée à la fois à la performance et à l'explicabilité, et surtout ne jamais perdre de vue l'utilisateur final — ici, une équipe magasin qui doit décider, chaque matin, combien de produits commander.</p>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Hamza Dahchour. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>
