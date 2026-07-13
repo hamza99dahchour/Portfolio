@@ -230,10 +230,12 @@
   }
   .cert-card:hover{border-color:var(--orange);transform:translateY(-3px);}
   .cert-card .icon{
-    width:52px;height:52px;border-radius:50%;background:var(--orange-soft);color:var(--orange);
+    width:64px;height:64px;border-radius:14px;background:var(--card);color:var(--orange);
     display:flex;align-items:center;justify-content:center;margin:0 auto 18px;
+    border:1px solid var(--card-border);overflow:hidden;
   }
   .cert-card .icon svg{width:24px;height:24px;}
+  .cert-card .icon img{width:100%;height:100%;object-fit:contain;padding:8px;}
   .cert-card .tag{font-family:'IBM Plex Mono',monospace;font-size:0.7rem;color:var(--orange);text-transform:uppercase;letter-spacing:.08em;}
   .cert-card h4{font-size:1rem;margin:10px 0 10px;font-family:'Inter',sans-serif;font-weight:700;}
   .cert-card p{font-size:0.85rem;color:var(--muted);}
@@ -621,21 +623,21 @@
     <h3 class="sub-head second">Certifications</h3>
     <div class="certs-grid">
       <a class="cert-card" href="https://www.coursera.org/account/accomplishments/specialization/certificate/J63M8WB5V2NP" target="_blank" rel="noopener">
-        <div class="icon">...</div>
+        <div class="icon"><img src="logo-ucsd.jpg" alt="UC San Diego"></div>
         <span class="tag">Certification</span>
         <h4>Big Data Specialization</h4>
         <p>UC San Diego — spécialisation sur les fondamentaux et outils du Big Data.</p>
         <span class="see">Voir le certificat →</span>
       </a>
       <a class="cert-card" href="https://www.credly.com/badges/edb87e17-f1c8-42b3-b661-68c0b6f5af7e/linked_in_profile" target="_blank" rel="noopener">
-        <div class="icon">...</div>
+        <div class="icon"><img src="logo-ibm.png" alt="IBM"></div>
         <span class="tag">Certification</span>
         <h4>IBM Data Science</h4>
         <p>Parcours professionnel couvrant l'ensemble du cycle de vie d'un projet data.</p>
         <span class="see">Voir le certificat →</span>
       </a>
       <a class="cert-card" href="https://www.credly.com/badges/1c2b7d44-edab-41a1-bc8a-961dc32a68e5/linked_in_profile" target="_blank" rel="noopener">
-        <div class="icon">...</div>
+        <div class="icon"><img src="logo-google-data-analytics.jpg" alt="Google Data Analytics"></div>
         <span class="tag">Certification</span>
         <h4>Google Data Analytics</h4>
         <p>Certificat professionnel en analyse de données et visualisation.</p>
