@@ -54,10 +54,11 @@
     border-bottom:1px solid var(--card-border);
   }
   .nav-inner{
-    max-width:var(--max);margin:0 auto;padding:20px 32px;
+    max-width:var(--max);margin:0 auto;padding:12px 32px;
     display:flex;justify-content:space-between;align-items:center;
   }
-  .nav-mark{font-family:'Playfair Display',serif;font-weight:700;font-size:1.3rem;letter-spacing:-0.02em;}
+  .nav-mark{font-family:'Playfair Display',serif;font-weight:700;font-size:1.3rem;letter-spacing:-0.02em;display:flex;align-items:center;gap:9px;}
+  .nav-mark img{width:52px;height:52px;border-radius:13px;display:block;}
   .nav-mark .dot{color:var(--orange);}
   .nav-links{display:flex;gap:28px;font-size:0.85rem;font-weight:600;color:var(--muted);}
   .nav-links a{transition:color .15s;}
@@ -351,7 +352,7 @@
 
 <header class="site-nav">
   <div class="nav-inner">
-    <a href="#top" class="nav-mark">Hamza<span class="dot">.</span></a>
+    <a href="#top" class="nav-mark"><img src="HD-logo-avatar-500.png" alt="HD Logo">Hamza<span class="dot">.</span></a>
     <nav class="nav-links">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
@@ -376,7 +377,7 @@
     <div>
       <h1>Hamza <span class="last">Dahchour</span></h1>
       <p class="role">Data Scientist · Computer Engineer</p>
-      <p class="lede">Robust data pipelines, Machine Learning and Deep Learning models, data products that matter to the business: I enjoy end-to-end projects, from analysis to deployment.</p>
+      <p class="lede">I design robust data pipelines, train Machine Learning and Deep Learning models, and turn raw data into products that are useful to the business. I enjoy end-to-end projects, from analysis to deployment.</p>
 
       <div class="hero-meta">
         <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.1-7-11a7 7 0 0114 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Paris, France</div>
