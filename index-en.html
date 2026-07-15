@@ -278,19 +278,22 @@
   .article-read{font-size:0.86rem;font-weight:700;color:var(--green);display:flex;align-items:center;gap:6px;margin-top:4px;}
 
   /* ===== TESTIMONIAL ===== */
-  .testi-wrap{max-width:720px;margin:0 auto;}
+  .testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:900px;margin:0 auto;}
   .testi-card{
-    background:var(--card);border:1px solid var(--card-border);border-radius:20px;padding:44px;
+    background:var(--card);border:1px solid var(--card-border);border-radius:20px;padding:36px 30px;
     position:relative;text-align:center;
   }
   .testi-card .quote-mark{color:var(--orange-soft);font-size:3.4rem;font-family:'Playfair Display',serif;line-height:1;}
-  .testi-card p.quote{font-size:1.12rem;color:var(--ink);margin:10px 0 26px;line-height:1.65;font-style:italic;font-family:'Playfair Display',serif;}
+  .testi-card p.quote{font-size:1.02rem;color:var(--ink);margin:10px 0 22px;line-height:1.6;font-style:italic;font-family:'Playfair Display',serif;}
   .testi-who{display:flex;align-items:center;justify-content:center;gap:12px;}
   .testi-avatar{
     width:42px;height:42px;border-radius:50%;background:var(--green-soft);color:var(--green);
-    display:flex;align-items:center;justify-content:center;font-weight:700;
+    display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0;
   }
-  .testi-who .name{font-size:0.92rem;font-weight:700;}
+  .testi-who .name{font-size:0.92rem;font-weight:700;display:inline-flex;align-items:center;gap:5px;}
+  .testi-who .name a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--card-border);}
+  .testi-who .name a:hover{color:var(--orange);border-color:var(--orange);}
+  .testi-who .name svg{width:14px;height:14px;color:#0A66C2;flex-shrink:0;}
   .testi-who .role{font-size:0.8rem;color:var(--muted);}
   .testi-note{text-align:center;margin-top:16px;font-size:0.78rem;color:var(--muted);font-family:'IBM Plex Mono',monospace;}
 
@@ -360,6 +363,7 @@
       <a href="#skills">Skills</a>
       <a href="#activities">Activities</a>
       <a href="#articles">Articles</a>
+      <a href="#testimonial">Testimonials</a>
     </nav>
     <div class="nav-right">
       <div class="lang-switch">
@@ -709,6 +713,42 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="testimonial">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Testimonials</h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <div class="testi-grid">
+      <div class="testi-card">
+        <span class="quote-mark">"</span>
+        <p class="quote">Hamza showed great autonomy and real analytical judgment during his internship. His ability to turn raw data into tools the teams could actually use was highly valued.</p>
+        <div class="testi-who">
+          <div class="testi-avatar">J</div>
+          <div>
+            <div class="name"><a href="https://www.linkedin.com/in/jaouad-chouki-b3378b33/" target="_blank" rel="noopener">Jaouad CHOUKI <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 11-4-.002 2 2 0 014 .002zM7 8.48H3V21h4V8.48zM13.32 8.48H9.34V21h3.94v-6.57c0-1.66.31-3.27 2.38-3.27 2.04 0 2.07 1.9 2.07 3.38V21H21.7v-7.93c0-3.44-.74-6.09-4.76-6.09-1.93 0-3.22 1.06-3.75 2.06h-.06V8.48z"/></svg></a></div>
+            <div class="role">Manager, Pole Star SA</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <span class="quote-mark">"</span>
+        <p class="quote">If I had to choose just one person to get a task done, it would be Hamza, without hesitation. Serious, reliable and always ready to get involved, he knows how to see every mission through, efficiently and with a good attitude. A colleague you can truly count on.</p>
+        <div class="testi-who">
+          <div class="testi-avatar">M</div>
+          <div>
+            <div class="name"><a href="https://www.linkedin.com/in/mohammed-zergaoui-0150b2201/" target="_blank" rel="noopener">Mohammed ZERGAOUI <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 11-4-.002 2 2 0 014 .002zM7 8.48H3V21h4V8.48zM13.32 8.48H9.34V21h3.94v-6.57c0-1.66.31-3.27 2.38-3.27 2.04 0 2.07 1.9 2.07 3.38V21H21.7v-7.93c0-3.44-.74-6.09-4.76-6.09-1.93 0-3.22 1.06-3.75 2.06h-.06V8.48z"/></svg></a></div>
+            <div class="role">Deputy Manager, Carrefour</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="testi-note">Translated from the original French.</p>
   </div>
 </section>
 
