@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From General Engineer to Data Scientist — Hamza Dahchour</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBF3E1;--bg-soft:#F5EAD0;--card:#FFFFFF;--card-border:#E9DFC3;
+    --ink:#221F19;--muted:#6C6656;--green:#1F4B3B;--green-soft:#E4EEE7;
+    --orange:#DE5B34;--orange-soft:#FBE2D2;
+    --grad:linear-gradient(90deg,#DE5B34,#1F4B3B);--max:760px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.7;}
+  a{color:var(--green);text-decoration:none;}
+  body::before{content:'';position:fixed;top:0;left:0;right:0;height:5px;background:var(--grad);}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px;}
+  header{padding:26px 0;border-bottom:1px solid var(--card-border);margin-bottom:56px;background:rgba(251,243,225,0.9);}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;max-width:1120px;}
+  .back{font-size:0.85rem;color:var(--muted);display:flex;align-items:center;gap:6px;}
+  .back:hover{color:var(--orange);}
+  .mark{font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:var(--ink);}
+  .mark span{color:var(--orange);}
+  main{padding-bottom:100px;}
+  .meta{font-family:'IBM Plex Mono',monospace;font-size:0.8rem;color:var(--orange);margin-bottom:18px;}
+  h1{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4vw,2.6rem);font-weight:700;letter-spacing:-0.01em;line-height:1.15;margin-bottom:26px;color:var(--ink);}
+  h2{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;margin:40px 0 16px;color:var(--green);}
+  p{color:var(--muted);font-size:1.02rem;margin-bottom:18px;}
+  p strong{color:var(--ink);}
+  ul{margin:0 0 20px 20px;color:var(--muted);}
+  li{margin-bottom:8px;}
+  .tags{display:flex;gap:8px;margin:24px 0 40px;flex-wrap:wrap;}
+  .tags span{font-size:0.75rem;padding:5px 12px;border-radius:14px;background:var(--green-soft);color:var(--green);font-weight:600;}
+  .pull{border-left:3px solid var(--orange);padding-left:20px;margin:32px 0;font-style:italic;color:var(--ink);font-size:1.08rem;font-family:'Playfair Display',serif;}
+  footer{padding:36px 0;text-align:center;border-top:1px solid var(--card-border);}
+  footer p{font-size:0.8rem;color:var(--muted);}
+  .lang-switch-mini{display:flex;align-items:center;gap:2px;background:var(--bg-soft);border:1px solid var(--card-border);border-radius:20px;padding:3px;}
+  .lang-switch-mini a{font-size:0.72rem;font-weight:700;padding:4px 10px;border-radius:16px;color:var(--muted);text-decoration:none;}
+  .lang-switch-mini a.active{background:var(--green);color:#fff;}
+  .header-right{display:flex;align-items:center;gap:16px;}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="mark">Hamza<span>.</span></span>
+    <div class="header-right">
+      <div class="lang-switch-mini">
+        <a href="article3.html">FR</a>
+        <a href="article3-en.html" class="active">EN</a>
+      </div>
+      <a class="back" href="index-en.html">← Back to portfolio</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="meta">June 2026 · 5 min read</div>
+    <h1>From general engineer to Data Scientist: my journey between Calais, Finland and Paris</h1>
+    <div class="tags"><span>Career</span><span>Journey</span><span>Data</span></div>
+
+    <p>My path to data science wasn't linear from the start. It begins in a scientific preparatory class (PSI track), continues through a general engineering school, crosses an Erasmus exchange in Finland, and today takes shape through a Master's in Data Science &amp; Business Intelligence on a work-study program at Carrefour. Here's what this journey has taught me.</p>
+
+    <h2>Prep school: rigor above all</h2>
+    <p>Two years of preparatory classes in the PSI track mainly taught me one thing: methodological rigor matters as much as the final answer. In data science, that reflex remains invaluable — a poorly framed model produces wrong results with the same confidence as a well-built one.</p>
+
+    <h2>General engineering school: learning how to learn</h2>
+    <p>My engineering degree in computer science, with a specialization in Data Science, at École d'ingénieurs du Littoral-Côte-d'Opale, gave me a broad technical foundation — development, systems, networks, databases — before specializing. That breadth of training is an underrated asset in data science: a data scientist who also understands infrastructure (Docker, Cloud, pipelines) communicates more easily with technical teams and ships projects that are actually deployable, not just notebooks.</p>
+
+    <h2>Finland: stepping out of my comfort zone</h2>
+    <p>A year on Erasmus exchange at Centria University of Applied Sciences, in Kokkola, was a shift in scale — personal as much as academic: a new working language, a new teaching culture, a new way of approaching projects independently. It's also during this period that I consolidated my professional English (B2 level), now a daily working tool.</p>
+
+    <h2>The field: Pole Star, then Carrefour</h2>
+    <p>My final-year internship at Pole Star SA was my first complete experience of an end-to-end data project — from data collection to the final product presented to teams. My current work-study program at Carrefour, as part of the EDC Master's, goes even further: it confronted me with a real business problem (forecasting demand for fresh products) using real data, operational constraints, and above all, non-technical end users to convince.</p>
+
+    <div class="pull">"A generalist background isn't a detour on the way to data science: it's often what makes it possible to ship projects that are genuinely useful."</div>
+
+    <h2>What I take away from this journey</h2>
+    <p>Each step — prep school, engineering school, Finland, Pole Star, then Carrefour — added a different building block: rigor, technical versatility, adaptability, field experience, and finally the ability to turn a statistical model into an operational decision. I believe it's this combination, more than any single isolated skill, that defines how I approach a data science project today.</p>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Hamza Dahchour. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

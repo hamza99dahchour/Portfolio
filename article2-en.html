@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>L'effet barbecue : météo, jours fériés et demande retail — Hamza Dahchour</title>
+<title>The Barbecue Effect: Weather, Public Holidays and Retail Demand — Hamza Dahchour</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -51,39 +51,39 @@
     <span class="mark">Hamza<span>.</span></span>
     <div class="header-right">
       <div class="lang-switch-mini">
-        <a href="article2.html" class="active">FR</a>
-        <a href="article2-en.html">EN</a>
+        <a href="article2.html">FR</a>
+        <a href="article2-en.html" class="active">EN</a>
       </div>
-      <a class="back" href="index.html">← Retour au portfolio</a>
+      <a class="back" href="index-en.html">← Back to portfolio</a>
     </div>
   </div>
 </header>
 
 <main>
   <div class="wrap">
-    <div class="meta">Mai 2026 · 6 min de lecture</div>
-    <h1>L'« effet barbecue » : quand météo et jours fériés bouleversent la demande retail</h1>
+    <div class="meta">May 2026 · 6 min read</div>
+    <h1>The "barbecue effect": when weather and public holidays upend retail demand</h1>
     <div class="tags"><span>Data Science</span><span>SHAP</span><span>Retail</span></div>
 
-    <p>Parmi les résultats les plus marquants de mon mémoire sur la prévision de la demande en produits frais chez Carrefour, il y a ce que j'ai appelé l'« effet barbecue ». C'est un bon exemple de ce que l'analyse SHAP permet de mettre en évidence : des interactions entre variables qu'une approche linéaire classique ne peut pas capturer.</p>
+    <p>Among the most striking findings of my thesis on forecasting fresh-product demand at Carrefour is what I called the "barbecue effect." It's a good example of what SHAP analysis can reveal: interactions between variables that a classic linear approach simply can't capture.</p>
 
-    <h2>Un effet qui n'est pas une simple addition</h2>
-    <p>Intuitivement, on pourrait penser que l'effet d'un jour férié sur la demande s'ajoute simplement à l'effet d'une météo chaude. Ce n'est pas ce que montrent les données. Lorsque ces deux conditions se combinent — beau temps <strong>et</strong> jour férié — la demande de certaines catégories de produits frais augmente de <strong>45 % par rapport à un week-end normal</strong>, un chiffre supérieur à la somme des deux effets pris isolément.</p>
-    <p>C'est le signe d'une véritable interaction : le jour férié amplifie l'effet de la météo, et inversement. Un modèle qui traiterait ces deux variables indépendamment sous-estimerait systématiquement la demande dans ce scénario précis — c'est-à-dire, justement, dans les moments où une rupture de stock coûte le plus cher à l'enseigne comme au client.</p>
+    <h2>An effect that isn't a simple sum</h2>
+    <p>Intuitively, one might think the effect of a public holiday on demand simply adds to the effect of warm weather. That's not what the data shows. When the two conditions combine — good weather <strong>and</strong> a public holiday — demand for certain fresh-product categories rises by <strong>45% compared with a normal weekend</strong>, a figure higher than the sum of the two effects taken separately.</p>
+    <p>This is a sign of a genuine interaction: the public holiday amplifies the weather effect, and vice versa. A model that treated these two variables independently would systematically underestimate demand in this exact scenario — that is, precisely in the moments when a stock-out costs the most, for both the retailer and the customer.</p>
 
-    <h2>Des seuils de température différents selon les produits</h2>
-    <p>L'analyse SHAP a aussi permis d'identifier des seuils de température propres à chaque catégorie de produit, plutôt qu'un effet météo générique. La demande de boissons réfrigérées connaît une nette accélération à partir de 22°C, tandis que la demande de salades préparées suit une dynamique différente : elle s'inverse autour de 18°C. Ces seuils ne sont pas arbitraires — ils correspondent à des points de bascule réels dans le comportement d'achat, invisibles dans une simple moyenne mobile.</p>
+    <h2>Different temperature thresholds depending on the product</h2>
+    <p>SHAP analysis also made it possible to identify temperature thresholds specific to each product category, rather than a generic weather effect. Demand for chilled drinks accelerates sharply from 22°C onward, while demand for prepared salads follows a different dynamic: it reverses around 18°C. These thresholds aren't arbitrary — they correspond to real tipping points in purchasing behavior, invisible in a simple moving average.</p>
 
-    <div class="pull">« Le jour férié n'ajoute pas un effet à la météo : il le multiplie. »</div>
+    <div class="pull">"A public holiday doesn't add to the weather effect: it multiplies it."</div>
 
-    <h2>Pourquoi cela compte pour un magasin</h2>
-    <p>Ce type de résultat n'a d'intérêt que s'il devient actionnable. Traduit en langage opérationnel, cela donne une règle simple pour un responsable de rayon : à l'approche d'un jour férié annoncé avec une météo chaude, il ne s'agit pas d'augmenter légèrement la commande, mais d'anticiper un pic de demande nettement supérieur à celui d'un jour férié « classique » ou d'un simple week-end ensoleillé.</p>
-    <p>C'est exactement le type d'enseignement que l'explicabilité (SHAP) permet de faire remonter d'un modèle de Machine Learning vers une décision métier concrète — et c'est ce qui, à mon sens, distingue un modèle « qui prédit bien » d'un modèle réellement utile.</p>
+    <h2>Why this matters for a store</h2>
+    <p>This kind of result only matters if it becomes actionable. Translated into operational language, it gives a simple rule for a department manager: ahead of a public holiday forecast with warm weather, the answer isn't to slightly increase the order, but to anticipate a demand spike well above that of a "regular" public holiday or a simple sunny weekend.</p>
+    <p>This is exactly the kind of insight that explainability (SHAP) can surface from a Machine Learning model into a concrete business decision — and, in my view, it's what separates a model that "predicts well" from a model that's genuinely useful.</p>
   </div>
 </main>
 
 <footer>
-  <p>© 2026 Hamza Dahchour. Tous droits réservés.</p>
+  <p>© 2026 Hamza Dahchour. All rights reserved.</p>
 </footer>
 
 </body>

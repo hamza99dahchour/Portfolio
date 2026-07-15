@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forecasting Fresh Product Demand with Machine Learning — Hamza Dahchour</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBF3E1;--bg-soft:#F5EAD0;--card:#FFFFFF;--card-border:#E9DFC3;
+    --ink:#221F19;--muted:#6C6656;--green:#1F4B3B;--green-soft:#E4EEE7;
+    --orange:#DE5B34;--orange-soft:#FBE2D2;
+    --grad:linear-gradient(90deg,#DE5B34,#1F4B3B);--max:760px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.7;}
+  a{color:var(--green);text-decoration:none;}
+  body::before{content:'';position:fixed;top:0;left:0;right:0;height:5px;background:var(--grad);}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px;}
+  header{padding:26px 0;border-bottom:1px solid var(--card-border);margin-bottom:56px;background:rgba(251,243,225,0.9);}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;max-width:1120px;}
+  .back{font-size:0.85rem;color:var(--muted);display:flex;align-items:center;gap:6px;}
+  .back:hover{color:var(--orange);}
+  .mark{font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:var(--ink);}
+  .mark span{color:var(--orange);}
+  main{padding-bottom:100px;}
+  .meta{font-family:'IBM Plex Mono',monospace;font-size:0.8rem;color:var(--orange);margin-bottom:18px;}
+  h1{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4vw,2.6rem);font-weight:700;letter-spacing:-0.01em;line-height:1.15;margin-bottom:26px;color:var(--ink);}
+  h2{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;margin:40px 0 16px;color:var(--green);}
+  p{color:var(--muted);font-size:1.02rem;margin-bottom:18px;}
+  p strong{color:var(--ink);}
+  ul{margin:0 0 20px 20px;color:var(--muted);}
+  li{margin-bottom:8px;}
+  .tags{display:flex;gap:8px;margin:24px 0 40px;flex-wrap:wrap;}
+  .tags span{font-size:0.75rem;padding:5px 12px;border-radius:14px;background:var(--green-soft);color:var(--green);font-weight:600;}
+  .pull{border-left:3px solid var(--orange);padding-left:20px;margin:32px 0;font-style:italic;color:var(--ink);font-size:1.08rem;font-family:'Playfair Display',serif;}
+  .stat-row{display:flex;gap:16px;flex-wrap:wrap;margin:28px 0;}
+  .stat{background:var(--card);border:1px solid var(--card-border);border-radius:14px;padding:18px 22px;flex:1;min-width:150px;}
+  .stat .num{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--orange);}
+  .stat .label{font-size:0.8rem;color:var(--muted);margin-top:4px;}
+  footer{padding:36px 0;text-align:center;border-top:1px solid var(--card-border);}
+  footer p{font-size:0.8rem;color:var(--muted);}
+  .lang-switch-mini{display:flex;align-items:center;gap:2px;background:var(--bg-soft);border:1px solid var(--card-border);border-radius:20px;padding:3px;}
+  .lang-switch-mini a{font-size:0.72rem;font-weight:700;padding:4px 10px;border-radius:16px;color:var(--muted);text-decoration:none;}
+  .lang-switch-mini a.active{background:var(--green);color:#fff;}
+  .header-right{display:flex;align-items:center;gap:16px;}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="mark">Hamza<span>.</span></span>
+    <div class="header-right">
+      <div class="lang-switch-mini">
+        <a href="article1.html">FR</a>
+        <a href="article1-en.html" class="active">EN</a>
+      </div>
+      <a class="back" href="index-en.html">← Back to portfolio</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="meta">May 2026 · 8 min read</div>
+    <h1>Forecasting fresh product demand with Machine Learning</h1>
+    <div class="tags"><span>Machine Learning</span><span>Retail</span><span>Random Forest</span><span>SHAP</span></div>
+
+    <p>As part of my work-study program at Carrefour and my final-year thesis at EDC Paris Business School, I looked into a very concrete problem for grocery retail: how to better anticipate demand for fresh refrigerated products, whose very short shelf life leaves little room for error in classic forecasting methods. Here's what this applied research project taught me.</p>
+
+    <h2>1. The problem: perishable products, highly volatile demand</h2>
+    <p>Fresh aisles (sandwiches, prepared salads, deli meats, chilled drinks) pose a specific operational challenge: a stock-out costs a sale, overstock ends up in the bin. And demand for these products is highly sensitive to exogenous factors — weather, public holidays, weekends — that traditional forecasting methods, often based on historical averages, fail to capture correctly.</p>
+
+    <h2>2. The method: Random Forest and SHAP explainability</h2>
+    <p>Drawing on two years of real sales data across four fresh-product sub-categories, I built a <strong>Random Forest</strong> model to predict daily demand, then used <strong>SHAP (SHapley Additive exPlanations)</strong> analysis to understand which factors actually drive the predictions, and how, category by category.</p>
+    <p>This methodological choice wasn't incidental: in a retail environment, a model that performs well but stays opaque has little value for a store manager. The goal was to produce predictions that were both reliable <strong>and</strong> understandable.</p>
+
+    <h2>3. What the model revealed</h2>
+    <p>The results confirm that weather and calendar effects are statistically significant, non-linear, and vary strongly by product category. Three main takeaways emerge: a temperature threshold around 22°C sharply increases demand for cold drinks; 18°C marks the inflection point for prepared-salad demand; and combining warm weather with a public holiday produces a "barbecue effect" — a demand spike well above the simple sum of the two effects taken separately (I cover this in a dedicated article).</p>
+
+    <div class="stat-row">
+      <div class="stat"><div class="num">8–12%</div><div class="label">Random Forest model MAPE</div></div>
+      <div class="stat"><div class="num">18–25%</div><div class="label">Historical average MAPE</div></div>
+      <div class="stat"><div class="num">2 years</div><div class="label">of real sales data</div></div>
+    </div>
+
+    <p>In practice, the model significantly reduces forecasting error compared with the historical baseline, with a particularly large gap on "atypical" days (heatwave, public holiday, heavy rain) — precisely the days when a bad forecast costs the most.</p>
+
+    <h2>4. From prediction to operational decision</h2>
+    <p>A forecasting model is only valuable if it changes a decision. The final part of the project was therefore about translating the model's output into <strong>simple ordering recommendations</strong>, usable by a department manager from just a weather forecast and a calendar — without needing to understand the underlying model's mathematics.</p>
+
+    <div class="pull">"A model's performance isn't measured only by its accuracy, but by its ability to change a decision on the ground."</div>
+
+    <h2>5. What I take away from this</h2>
+    <p>This project was a complete lesson in applied data science: start from a real business problem, choose a method suited to both performance and explainability, and above all never lose sight of the end user — here, a store team that has to decide, every morning, how many products to order.</p>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Hamza Dahchour. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

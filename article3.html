@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="hero-photo-real.png">
 <title>D'ingénieur généraliste à Data Scientist — Hamza Dahchour</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -38,6 +37,11 @@
   .pull{border-left:3px solid var(--orange);padding-left:20px;margin:32px 0;font-style:italic;color:var(--ink);font-size:1.08rem;font-family:'Playfair Display',serif;}
   footer{padding:36px 0;text-align:center;border-top:1px solid var(--card-border);}
   footer p{font-size:0.8rem;color:var(--muted);}
+  .lang-switch-mini{display:flex;align-items:center;gap:2px;background:var(--bg-soft);border:1px solid var(--card-border);border-radius:20px;padding:3px;}
+  .lang-switch-mini a{font-size:0.72rem;font-weight:700;padding:4px 10px;border-radius:16px;color:var(--muted);text-decoration:none;}
+  .lang-switch-mini a.active{background:var(--green);color:#fff;}
+  .header-right{display:flex;align-items:center;gap:16px;}
+
 </style>
 </head>
 <body>
@@ -45,7 +49,13 @@
 <header>
   <div class="wrap">
     <span class="mark">Hamza<span>.</span></span>
-    <a class="back" href="index.html">← Retour au portfolio</a>
+    <div class="header-right">
+      <div class="lang-switch-mini">
+        <a href="article3.html" class="active">FR</a>
+        <a href="article3-en.html">EN</a>
+      </div>
+      <a class="back" href="index.html">← Retour au portfolio</a>
+    </div>
   </div>
 </header>
 
@@ -64,7 +74,7 @@
     <p>Mon diplôme d'ingénieur en génie informatique, avec spécialisation Data Science, à l'École d'ingénieurs du Littoral-Côte-d'Opale, m'a donné un socle technique large : développement, systèmes, réseaux, bases de données, avant de se spécialiser. Cette largeur de formation est un atout sous-estimé en data science : un data scientist qui comprend aussi l'infrastructure (Docker, Cloud, pipelines) communique plus facilement avec les équipes techniques et livre des projets réellement déployables, pas seulement des notebooks.</p>
 
     <h2>La Finlande : sortir de sa zone de confort</h2>
-    <p>Une année de mobilité Erasmus à Centria University of Applied Sciences, à Kokkola, a été un changement d'échelle personnel autant qu'académique : nouvelle langue de travail, nouvelle culture pédagogique, nouvelle façon d'aborder les projets en autonomie. C'est aussi durant cette période que j'ai consolidé mon anglais professionnel (niveau C1, TOEIC 990), aujourd'hui un outil de travail au quotidien.</p>
+    <p>Une année de mobilité Erasmus à Centria University of Applied Sciences, à Kokkola, a été un changement d'échelle personnel autant qu'académique : nouvelle langue de travail, nouvelle culture pédagogique, nouvelle façon d'aborder les projets en autonomie. C'est aussi durant cette période que j'ai consolidé mon anglais professionnel (niveau B2), aujourd'hui un outil de travail au quotidien.</p>
 
     <h2>Le terrain : Pole Star, puis Carrefour</h2>
     <p>Mon stage de fin d'études chez Pole Star SA a été ma première expérience complète de projet data de bout en bout — de la collecte des données jusqu'au produit final présenté aux équipes. Mon alternance actuelle chez Carrefour, dans le cadre du Master EDC, va plus loin encore : elle m'a confronté à un vrai problème métier (la prévision de la demande de produits frais) avec des données réelles, des contraintes opérationnelles, et surtout des utilisateurs finaux non-techniques à convaincre.</p>

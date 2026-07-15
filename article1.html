@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="hero-photo-real.png">
 <title>Prévoir la demande de produits frais grâce au Machine Learning — Hamza Dahchour</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -42,6 +41,11 @@
   .stat .label{font-size:0.8rem;color:var(--muted);margin-top:4px;}
   footer{padding:36px 0;text-align:center;border-top:1px solid var(--card-border);}
   footer p{font-size:0.8rem;color:var(--muted);}
+  .lang-switch-mini{display:flex;align-items:center;gap:2px;background:var(--bg-soft);border:1px solid var(--card-border);border-radius:20px;padding:3px;}
+  .lang-switch-mini a{font-size:0.72rem;font-weight:700;padding:4px 10px;border-radius:16px;color:var(--muted);text-decoration:none;}
+  .lang-switch-mini a.active{background:var(--green);color:#fff;}
+  .header-right{display:flex;align-items:center;gap:16px;}
+
 </style>
 </head>
 <body>
@@ -49,7 +53,13 @@
 <header>
   <div class="wrap">
     <span class="mark">Hamza<span>.</span></span>
-    <a class="back" href="index.html">← Retour au portfolio</a>
+    <div class="header-right">
+      <div class="lang-switch-mini">
+        <a href="article1.html" class="active">FR</a>
+        <a href="article1-en.html">EN</a>
+      </div>
+      <a class="back" href="index.html">← Retour au portfolio</a>
+    </div>
   </div>
 </header>
 
